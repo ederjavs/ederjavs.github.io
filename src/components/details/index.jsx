@@ -36,7 +36,6 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
         } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
       >
         <div
-          className="font-semibold"
           style={{
             wordBreak: 'break-word',
           }}
