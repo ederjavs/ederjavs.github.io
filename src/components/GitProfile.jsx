@@ -19,7 +19,6 @@ import {
   setupHotjar,
   tooManyRequestError,
   sanitizeConfig,
-  skeleton,
 } from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
@@ -57,6 +56,9 @@ const GitProfile = ({ config }) => {
     axios
       .get(`https://api.github.com/users/${sanitizedConfig.github.username}`)
       .then((response) => {
+        console.log(
+          `https://api.github.com/users/${sanitizedConfig.github.username}`
+        );
         let data = response.data;
 
         let profileData = {
@@ -219,28 +221,7 @@ const GitProfile = ({ config }) => {
               </div>
               <footer
                 className={`p-4 footer ${bgColor} text-base-content footer-center`}
-              >
-                <div className="card compact bg-base-100 shadow">
-                  <a
-                    className="card-body"
-                    href="https://github.com/arifszn/gitprofile"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div>
-                      {loading ? (
-                        skeleton({ width: 'w-52', height: 'h-6' })
-                      ) : (
-                        <p className="font-mono text-sm">
-                          Made with{' '}
-                          <span className="text-primary">GitProfile</span> and
-                          ❤️
-                        </p>
-                      )}
-                    </div>
-                  </a>
-                </div>
-              </footer>
+              ></footer>
             </Fragment>
           )
         )}
