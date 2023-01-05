@@ -47,7 +47,6 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   );
 };
 
-
 const isCompanyMention = (company) => {
   return company.startsWith('@') && !company.includes(' ');
 };
