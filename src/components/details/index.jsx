@@ -33,7 +33,7 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
       <div
         className={`${
           skeleton ? 'flex-grow' : ''
-        } text-sm font-semibold text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
+        } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
       >
         <div
           style={{
